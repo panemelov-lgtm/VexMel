@@ -1,0 +1,467 @@
+@font-face {
+  font-family: 'Poiret One';
+  src: url('Fonts/PoiretOne-Regular.ttf') format('truetype'); /* use TTF format */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* GENERAL SETTINGS */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #493932; /* rural-blue main background */
+  color: #ece8d3; /* homey-taupe main text color */
+}
+
+a {
+  text-decoration: none;
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+header {
+  background-color: #2e303e; /* rural-blue */
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px; /* adds roundness */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4); /* drop shadow */
+}
+
+
+header .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;  /* FULL WIDTH HEADER */
+  width: 95%;
+  padding: 0 0px;  /* tiny padding left/right */
+  
+}
+
+header .logo {
+  margin-right: auto;  /* <<< THIS MOVES THE LOGO LEFT */
+}
+
+header .logo img {
+  height: 50px;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 45px;
+}
+
+header nav ul li a {
+  color: #ece8d3; /* homey-taupe */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #c0b283; /* mallard-green */
+}
+
+/* HERO SECTION */
+.hero {
+  text-align: center;
+  padding-top: 70px !important;
+  padding-bottom: 300px !important;
+  background-color: #493932; /* earth-brown background */
+  color: #ece8d3; /* homey-taupe text */
+  
+}
+
+.hero h2 {
+    font-family: 'Poiret One', sans-serif; /* Use Poiret One */
+  font-size: 5em;
+  margin-bottom: 10px;
+  font-weight: 500;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* drop shadow */
+}
+.hero h3 {
+    font-family: 'Poiret One', sans-serif; /* Use Poiret One */
+  font-size: 7em;
+  margin-top: 1px !important;
+  font-weight: 500;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* drop shadow */
+}
+.hero p {
+  font-family: 'Poiret One', sans-serif; /* Use Poiret One */
+  font-size: 140%;
+  font-variant: small-caps;
+  padding-top: 2.5px !important;
+  margin: 0 auto;
+  max-width: 470px;
+  
+}
+
+/* Slanted divider */
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 20vh; /* Height relative to viewport, scales with screen */
+  background-color: #ece8d3; /* homey-taupe divider */
+  clip-path: polygon(0 90%, 100% 0, 100% 100%, 0 100%);
+}
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 140px 20px;
+  background-color: #493932;
+  color: #ece8d3;
+  overflow: visible; /* ensures pseudo-element doesn't overflow */
+}
+
+/* About Section */
+.about {
+    
+  margin-bottom: 00px;
+  position: relative;
+  background-color: #ece8d3; /* homey-taupe background */
+  padding: 100px 20px 300px 20px; /* keeps divider away from content */
+  color: #2e303e; /* rural-blue text */
+  font-family: 'Poiret One', sans-serif; /* Use Poiret One */
+  z-index: 1;
+}
+
+/* Container: text + image */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Text */
+.about-text {
+  flex: 1 1 400px; /* flexible, minimum 400px */
+}
+
+.about-text h2 {
+  font-size: 36px;
+  color: #493932; /* earth-brown heading */
+  margin-bottom: 60px;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #2e303e; /* rural-blue text */
+  margin-bottom: 15px;
+ text-shadow: 0.3px 0 #2e303e, 0 0.3px #2e303e, 0px 0.3px #2e303e
+  
+}
+
+/* Image */
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05); /* subtle zoom effect */
+}
+
+/* Slanted divider at bottom */
+.about::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 115px; /* divider size */
+  background-color: #2e303e; /* rural-blue */
+  
+  /* LEFT TOP → RIGHT BOTTOM */
+  clip-path: polygon(0 0, 100% 70%, 100% 100%, 0 100%);
+  
+  z-index: -1; /* always behind images + text */
+}
+
+/* PRODUCTS / SERVICES */
+.products {
+    
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #2e303e; /* rural-blue background */
+}
+
+.products h2 {
+    font-family: 'Poiret One', sans-serif; /* Use Poiret One */
+  font-size: 2.5em;
+  color: #ffffff; /* mallard-green accent */
+  margin-bottom: 100px;
+text-shadow: 0 4px 4px rgba(0, 0, 0, 0.4); /* drop shadow */
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 45px;
+}
+
+.product-card {
+  background-color: #493932; /* earth-brown card */
+  padding: 20px;
+  border-radius: 30px;
+  width: 300px;
+  height: 450px;
+  text-align: center;
+  color: #ece8d3; /* homey-taupe text */
+}
+
+.product-card img {
+  width: 100%;
+  height: 40%;
+  border-radius: 0px;
+  margin-bottom: 5px;
+  display: block;
+  overflow: hidden;
+}
+
+.product-card h3 {
+  margin-bottom: 5px;
+}
+
+.product-card p {
+  font-size: 0.95em;
+}
+
+/* CONTACT SECTION */
+.contact {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #ece8d3; /* homey-taupe background */
+  color: #2e303e; /* rural-blue text */
+}
+
+.contact h2 {
+  font-size: 2.5em;
+  color: #493932; /* earth-brown heading */
+  margin-bottom: 20px;
+}
+
+.contact p {
+  margin-bottom: 30px;
+  font-size: 1.1em;
+}
+
+.contact .btn {
+  background-color: #4f6339; /* mallard-green button */
+  color: #2e303e; /* rural-blue text */
+  padding: 15px 35px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+}
+
+.contact .btn:hover {
+  opacity: 0.8;
+}
+
+/* FOOTER */
+footer {
+  background-color: #2e303e; /* rural-blue footer */
+  text-align: center;
+  padding: 30px 0;
+  color: #ece8d3; /* homey-taupe footer text */
+  font-size: 0.9em;
+  margin-top: 50px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header .header-container {
+    flex-direction: column;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+
+  .product-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Container for each image */
+.image-frame {
+  width: 260px;             /* fixed width of each frame */
+  height: 200px;            /* fixed height */
+  overflow: hidden;         /* hide zoom overflow */
+  border: 0px solid #4f6339; /* mallard-green border */
+  border-radius: 10px;      /* optional rounded corners */
+  margin: 10px;             /* space between frames */
+  display: inline-block;    /* separate frames side by side */
+  vertical-align: top;      /* aligns frames correctly */
+  background-color: #ece8d3; /* homey-taupe background */
+}
+
+/* Image inside the frame */
+.image-frame img {
+  width:100%;
+  height: 100%;
+  object-fit: cover;        /* fills frame without stretching */
+  transition: transform 0.7s ease; /* smooth zoom */
+  display: block;
+}
+
+/* Zoom on hover */
+.image-frame:hover img {
+  transform: scale(1.2);    /* zoom inside frame */
+}
+
+/* Only affects sliders */
+.image-frame.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Stack slides */
+.image-frame.slider .slide-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;  /* hide all slides by default */
+  transition: transform 0.5s ease;
+  z-index: 1;
+}
+
+/* Show only active slide */
+.image-frame.slider .slide-img.active {
+  display: block;
+  z-index: 2;
+}
+
+/* Zoom on hover for active slide only */
+.image-frame.slider:hover .slide-img.active {
+  transform: scale(1.2);
+}
+
+/* Slider buttons */
+.image-frame.slider .slider-prev,
+.image-frame.slider .slider-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.image-frame.slider .slider-prev { left: 10px; }
+.image-frame.slider .slider-next { right: 10px; }
+
+.image-frame.slider .slider-prev:hover,
+.image-frame.slider .slider-next:hover {
+  background: rgba(0,0,0,0.7);
+}
+/* ===== Contact Section ===== */
+.contact-section {
+  background-color: #151a22;
+  padding: 80px 20px;
+  color: #f3f0e6;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #c0b283;
+}
+
+.contact-desc {
+  font-size: 18px;
+  color: #f3f0e6;
+  margin-bottom: 40px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.contact-item h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #bd916f;
+}
+
+.contact-item a {
+  color: #f3f0e6;
+  font-size: 18px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #c0b283;
+}
+
+/* Contact Icons (Instagram, WhatsApp, Viber) */
+.contact-icon {
+  width: 45px;
+  height: 45px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.contact-icon:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+.contact-icon {
+  width: 45px;
+  height: 45px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.contact-icon:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
